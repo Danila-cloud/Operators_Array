@@ -14,55 +14,49 @@ private:
 
 public:
 
-	//конструктор с одним параметром
-	explicit MyArray(int _size);
+	
+	explicit MyArray(int _size);  //конструктор
 
-	//конструктор копирования
-	MyArray(const MyArray& obj);
 
-	//оператор равенства ==
-	bool operator == (const MyArray& obj);
+	MyArray(const MyArray& obj);  //конструктор копирования
 
-	//оператор неравенства !=
-	bool operator != (const MyArray& obj);
 
-	//оператор больше > сравнение происходит по сумме элементов массивов
-	bool operator > (const MyArray& obj);
+	bool operator == (const MyArray& obj);	//оператор равенства ==
 
-	//оператор меньше < сравнение происходит по сумме элементов массивов
-	bool operator < (const MyArray& obj);
 
-	//оператор Array + Array
-	MyArray& operator + (const MyArray& obj);
+	bool operator > (const MyArray& obj);	//оператор > сравнение по сумме элементов
 
-	//оператор Array + int добавляет значение в конец массива
-	MyArray& operator + (int n);
 
-	//оператор Array * Array создаем массив с общими уникальнми элементами двух массивов
-	MyArray& operator * (const MyArray& obj);
+	bool operator < (const MyArray& obj);	//оператор < сравнение по сумме элементов
 
-	//оператор Array % Array создаем массив с уникальнми отличительными элементами двух массивов
-	MyArray& operator % (const MyArray& obj);
 
-	//оператор присваивания =
-	MyArray& operator = (const MyArray& obj);
+	int operator + (const MyArray& obj);	//оператор Arr + Arr
 
-	//оператор получение значения константного массива по индексу
-	int operator [] (int index) const;
 
-	//оператор изменения значения массива по индексу
-	int& operator [] (int index);
+	MyArray& operator + (int n);	//оператор добавляет значение в конец массива
 
-	//геттеры
-	int GetSize();
 
-	//деструктор
-	~MyArray();
+	int operator * (const MyArray& obj);	//оператор * высчитывает сумму всех элементов массива
 
-	//вывод массива на экрна
-	void print() const;
 
-	//заполнение массива
-	void setRand();
+	float operator % (const MyArray& obj);	//оператор % высчитывает среднее значение элементов
+
+
+	MyArray& operator = (const MyArray& obj);	//оператор присваивания =
+
+
+	int operator [] (int index) const;	//оператор получение значения по индексу
+
+
+	int GetSize();	//геттеры
+
+
+	~MyArray();	//деструктор
+
+
+	void print() const; 	//вывод массива на экрна
+
+
+	void setRand(); 	//заполнение массива
 
 };
