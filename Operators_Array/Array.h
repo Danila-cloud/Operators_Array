@@ -7,6 +7,11 @@ using namespace std;
 
 class MyArray
 {
+
+private:
+	int size = 0;
+	int* arr = nullptr;
+
 public:
 
 	//конструктор с одним параметром
@@ -58,10 +63,6 @@ public:
 	void print() const;
 
 	//заполнение массива
-	void FillArrayNoSrand();
-
-private:
-	int size = 0;
-	int* array = nullptr;
+	void setRand();
 
 };
